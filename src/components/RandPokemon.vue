@@ -1,17 +1,27 @@
 <template>
   <div class="container">
-    <h1 class="title">PokeMystery</h1>
+    <h1 class="title">Random Pokémon</h1>
     <div v-if="pokemon" class="pokemon-info">
       <h2 class="pokemon-name">{{ pokemon.name }}</h2>
       <img class="pokemon-image" :src="pokemon.image" :alt="pokemon.name" />
       <p><strong>HP:</strong> {{ pokemon.hp }}</p>
       <p><strong>Type(s):</strong> {{ pokemon.types.join(', ') }}</p>
+      <p><strong>Height:</strong> {{ pokemon.height / 10 }} m</p>
+      <p><strong>Weight:</strong> {{ pokemon.weight / 10 }} kg</p>
+      <p><strong>Abilities:</strong> {{ pokemon.abilities.join(', ') }}</p>
+      <h3>Base Stats:</h3>
+      <p>
+        <li v-for="stat in pokemon.baseStats" :key="stat.name">
+          {{ stat.name }}: {{ stat.value }}
+        </li>
+      </p>
     </div>
     <button class="fetch-button" @click="fetchRandomPokemon">
       Get Random Pokémon
     </button>
   </div>
 </template>
+
 
 <script>
 import axios from 'axios';
@@ -30,11 +40,21 @@ export default {
         const response = await axios.get(`https://pokeapi.co/api/v2/pokemon/${randomId}`);
         const data = response.data;
         const hpStat = data.stats.find(stat => stat.stat.name === 'hp');
+
         this.pokemon = {
           name: data.name,
           hp: hpStat ? hpStat.base_stat : 'N/A',
           types: data.types.map(t => t.type.name),
           image: data.sprites.front_default || '',
+
+          // Additional info:
+          height: data.height,             // height in decimetres
+          weight: data.weight,             // weight in hectograms
+          abilities: data.abilities.map(a => a.ability.name),  // list of abilities
+          baseStats: data.stats.map(stat => ({
+            name: stat.stat.name,
+            value: stat.base_stat
+          }))
         };
       } catch (error) {
         console.error('Error fetching Pokémon:', error);
@@ -47,6 +67,7 @@ export default {
   }
 };
 </script>
+
 
 <style scoped>
 .container {
