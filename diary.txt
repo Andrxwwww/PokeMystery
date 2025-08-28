@@ -1,0 +1,2 @@
+
+28 august - get to know the Vue.js + the PokeApi and organize the main tasks and extra tasks 
