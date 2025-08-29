@@ -1,2 +1,3 @@
 
-28 august - get to know the Vue.js + the PokeApi and organize the main tasks and extra tasks 
+28 august - get to know the Vue.js + the PokeApi and organize the main tasks and extra tasks
+29 august - did the main page and dock type menu + improvement on the page of fetching new Pokemons

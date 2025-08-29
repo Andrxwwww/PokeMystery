@@ -1,0 +1,5 @@
+-> Now create like dock menu that will be on top of the web app , with text labls like Home and DexMystery which will have RandPokemon.vue , make it like simple and dont forgot about the aesthetic
+
+-> Now at the RandPokemon.vue , add a background card like you did on the home , with the image on the left and on top of the image the name and in the bottom the HP , on the right side add the Type Abilities and Speed , and in another column in the right side to add the attack, defense , special attack and defense. Dont forget about the button for getting a new Pokemon in the bottom of the background card
+
+-> Add a loading when fetching from the api (when the button is clicked or the page refreshed)
