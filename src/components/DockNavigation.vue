@@ -32,6 +32,7 @@ export default {
   top: 3.0rem;
   left: 50%;
   transform: translateX(-50%);
+  z-index: 10;
 }
 
 .dock-container {
@@ -52,7 +53,7 @@ export default {
   padding: 12px 20px;
   border-radius: 18px;
   text-decoration: none;
-  color: #000000;
+  color: #a1a1a1;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   position: relative;
   overflow: hidden;
@@ -65,7 +66,7 @@ export default {
 
 .dock-item.active {
   background: rgba(255, 255, 255, 0.3);
-  color: #256aeb;
+  color: #ffffff;
   font-weight: bold ;
 }
 

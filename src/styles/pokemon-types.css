@@ -1,0 +1,129 @@
+/* Pokemon Type Colors */
+
+.type-normal {
+  --bg-color: #A8A878;
+  --border-color: #C4C4A4;
+  --glow-color: rgba(168, 168, 120, 0.4);
+}
+
+.type-fire {
+  --bg-color: #F08030;
+  --border-color: #FF9F5F;
+  --glow-color: rgba(240, 128, 48, 0.4);
+}
+
+.type-water {
+  --bg-color: #6890F0;
+  --border-color: #85A8FF;
+  --glow-color: rgba(104, 144, 240, 0.4);
+}
+
+.type-electric {
+  --bg-color: #F8D030;
+  --border-color: #FFE55F;
+  --glow-color: rgba(248, 208, 48, 0.4);
+}
+
+.type-grass {
+  --bg-color: #78C850;
+  --border-color: #9AE070;
+  --glow-color: rgba(120, 200, 80, 0.4);
+}
+
+.type-ice {
+  --bg-color: #98D8D8;
+  --border-color: #B8F0F0;
+  --glow-color: rgba(152, 216, 216, 0.4);
+}
+
+.type-fighting {
+  --bg-color: #C03028;
+  --border-color: #E05048;
+  --glow-color: rgba(192, 48, 40, 0.4);
+}
+
+.type-poison {
+  --bg-color: #A040A0;
+  --border-color: #C060C0;
+  --glow-color: rgba(160, 64, 160, 0.4);
+}
+
+.type-ground {
+  --bg-color: #E0C068;
+  --border-color: #F0D888;
+  --glow-color: rgba(224, 192, 104, 0.4);
+}
+
+.type-flying {
+  --bg-color: #A890F0;
+  --border-color: #C8B0FF;
+  --glow-color: rgba(168, 144, 240, 0.4);
+}
+
+.type-psychic {
+  --bg-color: #F85888;
+  --border-color: #FF78A8;
+  --glow-color: rgba(248, 88, 136, 0.4);
+}
+
+.type-bug {
+  --bg-color: #A8B820;
+  --border-color: #C8D840;
+  --glow-color: rgba(168, 184, 32, 0.4);
+}
+
+.type-rock {
+  --bg-color: #B8A038;
+  --border-color: #D8C058;
+  --glow-color: rgba(184, 160, 56, 0.4);
+}
+
+.type-ghost {
+  --bg-color: #705898;
+  --border-color: #9078B8;
+  --glow-color: rgba(112, 88, 152, 0.4);
+}
+
+.type-dragon {
+  --bg-color: #7038F8;
+  --border-color: #9058FF;
+  --glow-color: rgba(112, 56, 248, 0.4);
+}
+
+.type-dark {
+  --bg-color: #705848;
+  --border-color: #907868;
+  --glow-color: rgba(112, 88, 72, 0.4);
+}
+
+.type-steel {
+  --bg-color: #B8B8D0;
+  --border-color: #D8D8F0;
+  --glow-color: rgba(184, 184, 208, 0.4);
+}
+
+.type-fairy {
+  --bg-color: #EE99AC;
+  --border-color: #FFB9CC;
+  --glow-color: rgba(238, 153, 172, 0.4);
+}
+
+/* To later applying to each type of pokemon when catching */
+.pokemon-card[class*="type-"] {
+  background: linear-gradient(135deg, var(--bg-color)20 0%, var(--bg-color)40 100%);
+  border: 2px solid var(--border-color);
+  box-shadow: 0 8px 32px var(--glow-color), 0 0 20px var(--glow-color);
+}
+
+.pokemon-card[class*="type-"] .pokemon-name {
+  background: linear-gradient(135deg, var(--bg-color) 10%, var(--border-color) 80%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.pokemon-card[class*="type-"] .type-stat {
+  background: linear-gradient(135deg, var(--bg-color)50 0%, var(--bg-color)70 100%);
+  border: 1px solid var(--border-color);
+  color: white;
+}

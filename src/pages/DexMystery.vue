@@ -9,7 +9,7 @@
         {{ isLoading ? 'Loading...' : 'Get New Pokemon' }}
       </button>
 
-      <div class="pokemon-card">
+      <div class="pokemon-card" :class="'type-' + pokemon.types[0]">
         <div class="pokemon-layout">
           <!-- Left side - Image with name and HP -->
           <div class="pokemon-image-section">
@@ -25,7 +25,7 @@
           <div class="pokemon-stats-section">
             <!-- First column - Type, Abilities, Speed -->
             <div class="stats-column">
-              <div class="stat-item">
+              <div class="stat-item type-stat">
                 <span class="stat-label">Type</span>
                 <span class="stat-value">{{ pokemon.types.join(', ') }}</span>
               </div>
@@ -85,6 +85,7 @@ export default {
       isLoading: false,
     };
   },
+
   methods: {
     async fetchRandomPokemon() {
       try {
@@ -136,7 +137,9 @@ export default {
 </script>
 
 
-<style scoped>
+<style>
+@import '../styles/pokemon-types.css';
+
 /* General section */
 .container {
   padding: 200px 2rem 2rem;
@@ -150,7 +153,7 @@ export default {
 
 .pokemon-card {
   background: rgba(255, 255, 255, 0.15);
-  backdrop-filter: blur(20px);
+  backdrop-filter: blur(40px);
   border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: 30px;
   padding: 1.5rem 1.5rem 0rem 1.5rem;
@@ -178,11 +181,6 @@ export default {
   font-weight: bold;
   text-transform: capitalize;
   margin-bottom: 1rem;
-  color: #333;
-  background: linear-gradient(135deg, #3689e7 10%, #183ea5 80%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
 }
 
 .pokemon-image {
@@ -206,7 +204,7 @@ export default {
 .hp-label {
   font-size: 0.875rem;
   font-weight: 600;
-  color: #666;
+  color: #e9e9e9;
   text-transform: uppercase;
   letter-spacing: 0.5px;
 }
@@ -245,10 +243,30 @@ export default {
   transform: translateY(-2px);
 }
 
+.type-stat {
+  position: relative;
+  overflow: hidden;
+}
+
+.type-stat::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.5s;
+}
+
+.type-stat:hover::before {
+  left: 100%;
+}
+
 .stat-label {
   font-size: 0.875rem;
   font-weight: 600;
-  color: #666;
+  color: #838383;
   text-transform: uppercase;
   letter-spacing: 0.5px;
 }
@@ -256,7 +274,7 @@ export default {
 .stat-value {
   font-size: 1.1rem;
   font-weight: bold;
-  color: #333;
+  color: #e9e9e9;
   text-transform: capitalize;
 }
 
@@ -267,12 +285,12 @@ export default {
   max-width: 1400px;
 }
 
-/* Button positioned outside the card */
+/* Button for fetching new pokemons */
 .fetch-button {
   position: absolute;
   top: -4rem;
   right: 0;
-  background: linear-gradient(135deg, #3689e7 10%, #183ea5 80%);
+  background: linear-gradient(135deg, #80b4ee 10%, #4b6fd4 80%);
   color: white;
   font-weight: 600;
   padding: 1rem 2rem;

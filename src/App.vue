@@ -34,9 +34,9 @@ body {
   right: 0;
   bottom: 0;
   background-image: url('/images/background_forest.jpg');
+  background-color: black;
   background-size: cover;
   background-position: center;
-  opacity: 0.6;
   z-index: -1;
 }
 </style>

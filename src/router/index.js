@@ -1,6 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import Home from '../pages/Home.vue'
-import RandPokemon from '../pages/RandPokemon.vue'
+import RandPokemon from '../pages/DexMystery.vue'
 
 const routes = [
   {
