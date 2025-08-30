@@ -38,7 +38,7 @@ export default {
   width: 60px;
   height: 60px;
   border: 4px solid rgba(255, 255, 255, 0.3);
-  border-top: 4px solid #3689e7;
+  border-top: 4px solid #dfdfdf;
   border-radius: 50%;
   animation: spin 1s linear infinite;
 }
@@ -46,7 +46,7 @@ export default {
 .loading-text {
   font-size: 1.2rem;
   font-weight: 600;
-  color: #333;
+  color: #dfdfdf;
   margin: 0;
   text-align: center;
 }
