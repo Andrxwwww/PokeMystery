@@ -16,6 +16,14 @@
       >
         <span class="dock-label">DexMystery</span>
       </router-link>
+      
+      <router-link 
+        to="/pokedex" 
+        class="dock-item"
+        :class="{ active: $route.path === '/caught' }"
+      >
+        <span class="dock-label">Pokedex</span>
+      </router-link>
     </div>
   </nav>
 </template>

@@ -1,6 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import Home from '../pages/Home.vue'
 import RandPokemon from '../pages/DexMystery.vue'
+import CaughtPokemon from '../pages/Pokedex.vue'
 
 const routes = [
   {
@@ -12,6 +13,11 @@ const routes = [
     path: '/dexmystery',
     name: 'DexMystery',
     component: RandPokemon
+  },
+  {
+    path: '/pokedex',
+    name: 'Pokedex',
+    component: CaughtPokemon
   }
 ]
 
