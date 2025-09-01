@@ -3,3 +3,5 @@
 -> Now at the RandPokemon.vue , add a background card like you did on the home , with the image on the left and on top of the image the name and in the bottom the HP , on the right side add the Type Abilities and Speed , and in another column in the right side to add the attack, defense , special attack and defense. Dont forget about the button for getting a new Pokemon in the bottom of the background card
 
 -> Add a loading when fetching from the api (when the button is clicked or the page refreshed)
+
+-> Make it to possible to store the user pokemons on local storage and display it in other page
