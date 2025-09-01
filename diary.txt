@@ -3,4 +3,4 @@
 29 august - did the main page and dock type menu + improvement on the page of fetching new Pokemons
 30 august - some improvements on the aesthetic of the web page 
 31 august - add the pokedex section - where the user can see his pokemons (to later checkout the evolution chain and listen to the sounds)
-01 set - added the a card display to show the evolution chain and the cry sound of the pokemon that user clicks on pokedex
+01 sept - added the a card display to show the evolution chain and the cry sound of the pokemon that user clicks on pokedex

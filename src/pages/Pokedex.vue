@@ -1,3 +1,18 @@
+<!--
+  Pokedex Page Component
+  
+  This component displays a collection of all caught Pokemon in a grid layout.
+  Users can view their caught Pokemon, release them, and see detailed information.
+  
+  Features:
+  - Loads caught Pokemon from localStorage
+  - Displays Pokemon in responsive grid cards
+  - Shows Pokemon count at the top
+  - Allows releasing Pokemon with confirmation
+  - Opens detailed modal on Pokemon card click
+  - Displays catch timestamp for each Pokemon
+  - Responsive design with type-based styling
+-->
 <template>
   <div class="container">
     <!-- Page header with title and count -->
