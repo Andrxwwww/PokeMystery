@@ -74,7 +74,7 @@ A Comprehensive Pokemon web application that allows users to explore the vast wo
 
 1. Clone the repository
 ```bash
-git clone <this-repo-url>
+git clone <repo-url>
 cd pokemystery
 ```
 
