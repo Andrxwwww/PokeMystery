@@ -145,6 +145,7 @@ export default {
         // Fetch main Pokemon data from PokeAPI
         const response = await axios.get(`https://pokeapi.co/api/v2/pokemon/${randomId}`);
         const data = response.data;
+        //console.log(data)
 
         // Extract HP stat from the stats array
         const hpStat = data.stats.find(stat => stat.stat.name === 'hp');

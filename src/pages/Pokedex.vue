@@ -14,9 +14,10 @@
           :key="pokemon.id + '-' + pokemon.caughtAt"
           class="pokemon-card"
           :class="'type-' + pokemon.types[0]"
+          @click="openPokemonModal(pokemon)"
         >
           <!-- Release button -->
-          <button class="release-btn" @click="releasePokemon(pokemon)" title="Release Pokémon">
+          <button class="release-btn" @click.stop="releasePokemon(pokemon)" title="Release Pokémon">
             X
           </button>
           
@@ -51,15 +52,31 @@
         </div>
       </div>
     </div>
+
+    <!-- Simple Pokemon Modal -->
+    <SimplePokemonModal 
+      :pokemon="selectedPokemon" 
+      :isVisible="showModal" 
+      @close="closeModal" 
+    />
   </div>
 </template>
 
 <script>
+import SimplePokemonModal from '../components/PokemonModal.vue';
+
 export default {
   name: 'Pokedex',
+  
+  components: {
+    SimplePokemonModal
+  },
+  
   data() {
     return {
-      caughtPokemon: []
+      caughtPokemon: [],
+      selectedPokemon: null,
+      showModal: false
     };
   },
 
@@ -89,6 +106,18 @@ export default {
         hour: '2-digit',
         minute: '2-digit'
       });
+    },
+
+    // Open Pokemon detail modal
+    openPokemonModal(pokemon) {
+      this.selectedPokemon = pokemon;
+      this.showModal = true;
+    },
+
+    // Close Pokemon detail modal
+    closeModal() {
+      this.showModal = false;
+      this.selectedPokemon = null;
     }
   },
 
@@ -149,7 +178,7 @@ export default {
   justify-items: center;
 }
 
-/* Individual Pokémon card - smaller for 4-5 per row */
+/* Individual Pokémon card */
 .pokemon-card {
   background: rgba(255, 255, 255, 0.15);
   backdrop-filter: blur(40px);
@@ -160,11 +189,13 @@ export default {
   transition: all 0.3s ease;
   min-width: 220px;
   max-width: 280px;
+  cursor: pointer;
 }
 
 .pokemon-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 12px 40px rgba(0, 0, 0, 0.2);
+  border-color: rgba(255, 255, 255, 0.3);
 }
 
 /* Release button */

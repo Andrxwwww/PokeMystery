@@ -4,7 +4,7 @@
             <div class="hero-section">
                 <h1 class="hero-title">Welcome to PokeMystery</h1>
                 <p class="hero-subtitle">
-                    A new way to explore more of the world of Pokémon...
+                    A new way to explore more of the world of Pokemon...
                 </p>
                 <div class="hero-buttons">
                     <router-link to="/dexmystery" class="cta-button">
