@@ -18,11 +18,6 @@ const routes = [
     path: '/pokedex',
     name: 'Pokedex',
     component: Pokedex
-  },
-  // Catch-all route - must be last
-  {
-    path: '/:pathMatch(.*)*',
-    redirect: '/'
   }
 ]
 
