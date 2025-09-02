@@ -6,6 +6,7 @@
 </template>
 
 <script>
+// exporting to use it on the DexMystery
 export default {
   name: 'LoadingSpinner',
   props: {

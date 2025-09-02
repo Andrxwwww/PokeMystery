@@ -171,8 +171,6 @@ export default {
           location: locationAreas.length > 0 ? locationAreas.join(', ') : 'Unknown',
           types: data.types.map(t => t.type.name), // Extract type names
           image: data.sprites.front_default || '', // Default sprite image
-          height: data.height,
-          weight: data.weight,
           abilities: data.abilities.map(a => a.ability.name), // Extract ability names
           baseStats: data.stats.map(stat => ({ // Normalize stats structure
             name: stat.stat.name,
