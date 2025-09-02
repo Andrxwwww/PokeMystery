@@ -4,7 +4,7 @@ A Comprehensive Pokemon web application that allows users to explore the vast wo
 
 ## Public website
 
-https://pokemystery.onrender.com/
+https://pokemystery.vercel.app/
 
 ## Development Progression
 
