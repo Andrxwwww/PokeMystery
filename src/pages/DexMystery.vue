@@ -243,7 +243,7 @@ export default {
 
   /**
    * Vue lifecycle hook - runs after component is mounted to DOM
-   * Automatically fetches the first Pokemon when page loads
+   * Automatically fetches the first Pokemon when page loads (because it doesnt makes sense i can catch it b4 it was fetched)
    */
   mounted() {
     this.fetchRandomPokemon();
